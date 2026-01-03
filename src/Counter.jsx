@@ -45,9 +45,9 @@ function Counter(){
         const resetVal=()=>{
             localStorage.setItem('counter', 0)
             setCounter(0);
-             localStorage.setItem('incrementer', 0)
-            setIncrementer(0)
+            localStorage.setItem('incrementer', 0)
             logcode(incrementer, 50)
+            setIncrementer(0)
     }
 
 // useEffect(()=>{

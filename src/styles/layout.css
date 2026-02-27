@@ -1,0 +1,180 @@
+/* ── App Shell ────────────────────────────────────────── */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* ── Sidebar ──────────────────────────────────────────── */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #0d1117;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar__brand {
+  padding: 26px 20px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar__label {
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 8px;
+}
+
+.sidebar__brand-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.sidebar__logo {
+  width: 26px;
+  height: 26px;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.sidebar__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.sidebar__title span {
+  color: var(--accent);
+}
+
+/* ── Nav ──────────────────────────────────────────────── */
+.sidebar__nav {
+  padding: 14px 10px;
+  flex: 1;
+}
+
+.nav__group-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  padding: 0 10px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-2);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all var(--transition);
+  margin-bottom: 2px;
+  text-align: left;
+}
+
+.nav__item:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+.nav__item--active {
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-muted);
+  border-color: var(--accent-ring);
+}
+
+.nav__item--active:hover {
+  background: var(--accent-muted);
+  color: var(--accent);
+}
+
+.nav__dot {
+  margin-left: auto;
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── Sidebar Footer ───────────────────────────────────── */
+.sidebar__footer {
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  font-size: 10px;
+  color: var(--text-4);
+  line-height: 1.6;
+}
+
+/* ── Main Content ─────────────────────────────────────── */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 40px 44px;
+  overflow-x: hidden;
+}
+
+/* ── Page Header ──────────────────────────────────────── */
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-header__title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.page-header__subtitle {
+  color: var(--text-2);
+  font-size: 14px;
+}
+
+/* ── Toolbar ──────────────────────────────────────────── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toolbar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}

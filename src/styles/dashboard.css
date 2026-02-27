@@ -1,0 +1,229 @@
+/* ══════════════════════════════════════════════════════
+   DASHBOARD
+══════════════════════════════════════════════════════ */
+
+/* ── Stat grid ────────────────────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* ── Stat card ────────────────────────────────────────── */
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  transition: border-color var(--transition);
+  cursor: default;
+}
+
+.stat-card:hover {
+  border-color: var(--border-2);
+}
+
+.stat-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.stat-card__label {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.stat-card__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* ── Two-col summary grid ─────────────────────────────── */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ── Attendance rate card ─────────────────────────────── */
+.rate-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.rate-card__section-label {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 18px;
+}
+
+.rate-card__number {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.rate-card__big {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.rate-card__pct {
+  font-size: 22px;
+  color: var(--text-2);
+  font-weight: 300;
+}
+
+.rate-card__bar-track {
+  height: 7px;
+  background: var(--surface-2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.rate-card__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--green));
+  border-radius: var(--radius-full);
+  transition: width 1.2s ease;
+}
+
+.rate-card__caption {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-top: 10px;
+}
+
+/* ── Performers card ──────────────────────────────────── */
+.performers-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.performers-card__section-label {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 16px;
+}
+
+.performers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.performer-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.performer-row__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.performer-row__name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.performer-row__bar-track {
+  height: 4px;
+  background: var(--surface-2);
+  border-radius: var(--radius-full);
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.performer-row__bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+}
+
+.performer-row__score {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--amber);
+  flex-shrink: 0;
+}
+
+/* ── Recent attendance panel ──────────────────────────── */
+.recent-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.recent-panel__header {
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent-panel__title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.recent-panel__link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.recent-panel__link:hover {
+  text-decoration: underline;
+}
+
+.recent-panel__empty {
+  padding: 36px;
+  text-align: center;
+  color: var(--text-3);
+  font-size: 14px;
+}
